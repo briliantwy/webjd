@@ -1,0 +1,45 @@
+body,div,p,span,ul,li,input{
+	padding :0px;
+	margin:0px;
+}
+a{
+	text-decoration: none;
+}
+#nav{
+	/*background: #dd6788;*/
+	width:100%;
+	height:100px;
+
+	border-bottom:4px solid #F3F3F3;
+}
+#nav #nav-fixed{
+	/*background: #676868;*/
+	width:1210px;
+	height: 76px;
+	margin:0px auto;
+ }
+ #nav #nav-fixed .a1{
+ 	margin-top: 20px;
+ 	float: left;
+ }
+#nav #nav-fixed #logo-title{
+	float: left;
+	height:34px;
+	line-height: 34px;
+	font-size: 18px;
+	font-weight: bold;
+	color:#000;
+	border-left: solid 1px #bbb;
+	margin-top: 34px;
+	margin-left: 19px;
+	padding-left: 24px;
+} 
+#nav #nav-fixed #account{
+	margin-top: 55px;
+	font-size: 16px;
+	float: right;
+	color:#999;
+}
+#nav #nav-fixed #account .a2{
+	color:#000;
+}

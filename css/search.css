@@ -1,0 +1,80 @@
+#search-body{
+	/*background: #90de09;*/
+	height:145px;
+	border-bottom: 2px #B1191A solid;
+}
+#search-body #search-fixed{
+    /*background:#374928;*/
+	height:145px;
+	width:1210px;
+	margin:auto;
+	
+}
+#search-body #search-fixed #search-logo{
+	/*background: #5dd773;*/
+	width:100%;
+	height:100px;
+}
+#search-body #search-fixed #search-logo #search-logo-true{
+	/*background: #983dd8;*/
+	width:365px;
+	height:100px;
+	float: left;
+}
+#search-body #search-fixed #search-logo #search-button{
+	/*background: #a63487;*/
+	width:540px;
+	height:100px;
+	float: left;
+	
+	position:relative;
+}
+#search-body #search-fixed #search-logo #search-button .input-search{
+    width:454px;
+    height:32px;
+    border: 2px #C81623 solid;
+    position: absolute;left: 0px;top:25px;
+}
+#search-body #search-fixed #search-logo #search-button .input-button{
+	width:76px;
+	height:36px;
+	background: #C81623;
+	border: none;
+	color:white;
+	font-size:18px;
+    position: absolute;left: 458px;top:25px;
+}
+#search-body #search-fixed #search-logo #search-button ul{
+	position: absolute;top:62px;
+}
+#search-body #search-fixed #search-logo #search-button ul li{
+    float: left;
+    width:70px;
+}
+#search-body #search-fixed #search-logo #search-shopping{
+	/*background: #328ccc;*/
+	height:100px;
+	width:305px;
+	float: right;
+    text-align: center;
+}
+#search-body #search-fixed #search-logo #search-shopping input{
+	width:145px;
+	height:35px;
+	margin: 25px auto;
+
+}
+#search-body #search-fixed #search-sort ul li{
+	float: left;
+	font-size: 16px;
+	width:70px;
+	height:45px;
+	line-height: 45px;
+	padding-left:10px;
+}
+#search-body #search-fixed #search-sort .all-something{
+	background: #B1191A;
+	color:white;
+	width:200px;
+
+}

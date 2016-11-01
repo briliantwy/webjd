@@ -1,0 +1,72 @@
+a{
+	text-decoration: none;
+	color:#666;
+}
+a:hover{
+	color:#C81623;
+}
+/*nav的主体部分，nav的100%的模块区域*/
+#nav-body{
+	background:#f1f1f1;
+	height:30px;
+
+}
+/*nav中固定，nav的居中固定区域*/
+#nav-body #nav-fixed{
+	/*background:#f89899;*/
+	width:1210px;
+	height:30px;
+    margin:0px auto;
+}
+/*送货至：北京*/
+#nav-body #nav-fixed .nav-sent{
+	/*background: #d84989;*/
+	color:#666;
+	width:95px;
+	height:30px;
+	line-height: 30px;
+    text-align: center;
+    float: left;
+}
+/*使得加左右边框时文字不移动*/
+#nav-body #nav-fixed .nav-sent p{
+	width:90px;
+	height:30px;
+    margin: auto;
+}
+/*鼠标悬浮的样子*/
+#nav-body #nav-fixed .nav-sent p:hover{
+	background: white;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+/*nav中右边的区域*/
+#nav-body #nav-fixed ul{
+
+	/*background: #d09445;*/
+	list-style: none;
+	width:780px;
+	height:30px;
+	float: right;
+}
+#nav-body #nav-fixed ul li{
+	float: left;
+	width:75px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+
+}
+/*为li套盒子，使得加左右边框时文字不移动*/
+#nav-body #nav-fixed ul li div{
+	/*background: #a69879;*/
+	width:70px;
+	height:30px;
+	margin:auto;
+}
+/*鼠标悬浮加边框*/
+#nav-body #nav-fixed ul li div:hover{
+	background: white;
+    border-left:1px #ddd solid;
+    border-right: 1px #ddd solid;
+}

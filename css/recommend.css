@@ -1,0 +1,21 @@
+#recommend-body{
+	height:150px;
+}
+#recommend-body #recommend-fixed{
+	/*background: pink;*/
+	width:1210px;
+	height: inherit;
+	margin: auto;
+}
+#recommend-body #recommend-fixed ul{
+	margin-top: 10px;
+    width:1210px;
+    height:inherit;
+    cursor:pointer;
+}
+#recommend-body #recommend-fixed ul li{
+	width:249px;
+	height: inherit;
+	float: left;
+	margin-left:1px;
+}

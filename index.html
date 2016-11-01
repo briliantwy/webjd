@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+	<head>
+	     <meta charset="utf8">
+	     <title>高仿京东</title>
+	     <link rel="stylesheet" href="css/nav-body.css">
+         <link rel="stylesheet" href="css/Common.css">
+         <link rel="stylesheet" href="css/ad.css">
+         <link rel="stylesheet" href="css/search.css">
+         <link rel="stylesheet" href="css/sort-goods.css">
+         <link rel="stylesheet" href="css/recommend.css">
+         <link rel="stylesheet" href="css/your-like.css">
+         <script src="js/KDMove.js"></script>
+         <script>
+    window.onload = function(){
+        var lists = document.getElementsByName("lis")
+        var allInput = document.getElementsByName('inputs')
+        var uls   = document.getElementsByName("ul0")[0]
+        var index = 0
+        //获取到每一个按钮
+        for(var i = 0; i < allInput.length ; i++){
+            var currentInput = allInput[i]
+            //为每一个按钮绑定点击事件
+            currentInput.onclick = function(e){
+                e = e || window.event
+                //将所有按钮设置为未选中状态
+                for(var i=0;i<allInput.length; i++){
+                    var currentInput = allInput[i]
+                    currentInput.className = 'uncheck'
+                }
+                //将点击的按钮设置为选中状态
+                e.target.className = 'chected'
+                //
+                for(var j = 0;j < allInput.length ; j++){
+                    if (allInput[j] == e.target) {
+                        index = j;
+                    }
+                }
+                
+                starMove(uls,{"left":-index%lists.length*730})
+            }
+        }
+        var timer = setInterval(function(){
+            index++
+            for(var i=0;i<allInput.length; i++){
+                var currentInput = allInput[i]
+                currentInput.className = 'uncheck'
+                if (i == index%lists.length) {
+                    currentInput.className = 'chected'
+                }
+            }
+            
+            starMove(uls,{"left":-index%lists.length*730})
+
+            
+        },4000)
+    }
+    </script>
+	</head>
+	<body>
+<!-- 这里是头部导航条 -->
+		<div id="nav-body">
+		     <div id="nav-fixed">
+		     	 <div class="nav-sent">
+		     	 	<p>送至：北京</p>
+		     	 </div>
+		     
+			     <ul>
+				     <li style="width:75px"><a href="#">你好，请登录 </a></li>
+				     <li><div> <a href="login.html" style="color:#C81623">免费注册 </a></li>
+				     <li><div><a href="#">  我的订单</a></div></li>
+				     <li><div><a href="#">  我的京东</a></div></li>
+				     <li><div><a href="#">  京东会员</a></div></li>
+				     <li><div><a href="#">  企业采购</a></div></li>
+				     <li><div><a href="#">  手机京东</a></div></li>
+				     <li><div><a href="#">  关注京东</a></div></li>
+				     <li><div><a href="#">  客户服务</a></div></li>
+				     <li><div><a href="#">  网站导航</a></div></li>
+			     </ul>
+			 </div>
+		</div>
+<!-- 这里是广告 -->
+        <div id="ad-body">
+        	<div id="ad-img">
+        		<img src="http://img20.360buyimg.com/da/jfs/t2824/185/3421664694/45999/d6e18668/578e26ecNfde92163.jpg">
+        	</div>
+        </div>
+<!-- 搜索模块 -->
+        <div id="search-body">
+        	<div id="search-fixed">
+        		<div id="search-logo">
+        			<div id="search-logo-true">
+        				<img src="image/jd-logo.png" width="365px" height="100px">
+        			</div>
+        			<div id="search-button">
+        				<input class="input-search" placeholder="夏季女装">
+        				<input class="input-button" type="button" value="搜索">
+        				<ul>
+				            <li><a href="#">99减50</a></li>
+				            <li><a href="#"> <a href="#">格力空调</a></li>
+				            <li><a href="#">农用物资</a></li>
+				            <li><a href="#">199减50</a></li>
+				            <li><a href="#">婴儿沐浴露</a></li>
+				            <li><a href="#">衬衫女长袖</a></li>
+				            <li><a href="#">去黑头套装</a></li>
+				        </ul>
+        			</div>
+        			<div id="search-shopping">
+        				<input type="button" value="我的购物车>">
+        			</div>
+        		</div>
+<!-- 全部商品部分 -->
+        		<div id="search-sort">
+        			 <ul>
+                         <li class="all-something">全部商品分类</li>
+                         <li>服装城</li>
+                         <li>美妆馆</li>
+                         <li>京东超市</li>
+                         <li>生鲜</li>
+                         <li>全球购</li>
+                         <li>闪购</li>
+                         <li>团购</li>
+                         <li>拍卖</li>
+                         <li>金融</li>
+                     </ul>
+        		</div>
+        	</div>
+        </div>
+<!-- 所有商品部分 -->
+        <div id="goods-body">
+        	<div id="goods-fixed">
+        		<div id="goods-list">
+        			<ul>
+                       <li>家用电器</li>
+                       <li>手机,数码,京东通信</li>
+                       <li>电脑,办公</li>
+                       <li>家具,家居,家装,厨具</li>
+                       <li>男装,女装,童装,内衣</li>
+                       <li>个护化妆,清洁用品,宠物</li>
+                       <li>鞋靴,箱包,珠宝,奢侈品</li>
+                       <li>运动户外,钟表</li>
+                       <li>汽车,汽车用品</li>
+                       <li>母婴,玩具乐器</li>
+                       <li>食品,酒类,生鲜,特产</li>
+                       <li>医药保健</li>
+                       <li>图书音像电子书</li>
+                       <li>彩票旅行充值票务</li>
+                       <li>理财、众筹、白条、保险</li>
+                    </ul>
+        		</div>
+<!-- 这里是中间图片部分 -->
+        		<div id="goods-img" style="position: relative;">
+                   <ul id="ul1" style="position: absolute;" name="ul0">
+        			 <li><img src="http://img12.360buyimg.com/da/jfs/t2986/106/1694254329/150076/607378b0/578c886eN62228641.jpg" name="lis"></li>
+                     <li><img src="image/11.jpg" name="lis"></li>
+                     <li><img src="image/22.jpg" name="lis"></li>
+                     <li><img src="image/33.jpg" name="lis"></li>
+                     <li><img src="image/44.jpg" name="lis"></li>
+                     <li><img src="image/55.jpg" name="lis"></li>
+                   </ul>
+                   <div style="width: 100%;height: 20px;position:absolute;bottom: 8px;">
+                     <div style="width: 160px;height: 20px;margin: auto;">
+                         <input type="button" class="chected" value="1" name="inputs">
+                         <input type="button" class="uncheck" value="2" name="inputs">
+                         <input type="button" class="uncheck" value="3" name="inputs">
+                         <input type="button" class="uncheck" value="4" name="inputs">
+                         <input type="button" class="uncheck" value="5" name="inputs">
+                         <input type="button" class="uncheck" value="6" name="inputs">
+                     </div>
+        </div>
+        		</div>
+<!-- 这里是右侧新闻部分 -->
+        		<div id="goods-news">
+        			<ul>
+        				<li class="new">
+        					<span style="float:left;font-size:16px;font-weight:bold">京东快报</span><span style="float:right;color:black">更多></span>
+        				</li>
+        				<li class="nav">
+        					 <ul>
+                               <li><span>[特惠]</span>【看奥运】里约游免费抢！</li>
+                               <li><span>[公告]</span>水灾救援物资网友捐赠通道开启</li>
+                               <li><span>[特惠]</span>办公设备一站购，低至99元</li>
+                               <li><span>[公告]</span>京东美食地图·地方生鲜馆上线</li>
+                               <li><span>[特惠]</span>运动放暑“价”大牌低至1折</li>
+                             </ul>
+        				</li>
+        				<li class="ad">
+        					<ul>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+                                <li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        						<li>
+        							<img src="image/1.png">
+        							<p>话费</p>
+        						</li>
+        					</ul>
+        				</li>
+        			</ul>
+        			<div id="img">
+        				<img src="http://img20.360buyimg.com/da/jfs/t2902/63/3286632035/12535/ad80f30d/578898aeN380be244.jpg">
+        			</div>
+        		</div>
+        	</div>
+        </div>
+<!-- 这里是今日推荐部分 -->
+        <div id="recommend-body">
+            <div id="recommend-fixed">
+        	   <ul>
+        		   <li style="width:210px;margin-left:0px">
+        		   	 <img src="image/clock.png" width="210px" height="150px">
+        		   </li>
+        		   <li>
+        		   	 <img src="http://img12.360buyimg.com/vclist/jfs/t2866/76/3342523672/11551/345f7c67/5788474aN823a020b.jpg">
+        		   </li>
+        		   <li>
+        		   	 <img src="http://img13.360buyimg.com/da/jfs/t2770/26/3475220838/28286/6e23d0c0/578d9783N451c001e.jpg">
+        		   </li>
+        		   <li>
+        		   	  <img src="http://img20.360buyimg.com/da/jfs/t2593/242/3435881034/16236/aa6ef889/578ee864Nd33eae20.jpg">
+        		   </li>
+        		   <li>
+        		   	  <img src="http://img30.360buyimg.com/da/jfs/t2650/311/3541351442/25215/5b8e7f5a/5790645fN22dc9aad.jpg">
+        		   </li>
+                
+               </ul>
+            </div>
+        </div>
+        <div id="your-like">
+        	<div id="like-fixed"> 
+        	     <p style="width:1210px;">猜你喜欢<span style="float:right;font-size:12px;">换一批</span></p>
+        	     <div id="like-body">
+        	  	     <ul class="like-img">
+        	  	     	<li class="main-li">
+        	  	     	   <div id="left-li">
+        	  	     	    <p>── 发现你喜欢 ──</p>
+        	  	     		<ul>
+        	  	     			<li>有情调</li>
+        	  	     			<li>寒冬精选</li>
+        	  	     			<li>萌宝</li>
+        	  	     			<li>手机配件</li>
+        	  	     			<li>爱厨房</li>
+        	  	     			<li>男包</li>
+        	  	     		</ul>
+        	  	     	  </div>
+        	  	     	</li>
+        	  	     	<li class="main-li">
+        	  	     		<img src="http://img13.360buyimg.com/n1/s150x150_g16/M00/03/17/rBEbRlNsvGoIAAAAAAMPWqybndgAAAuZwHzyNsAAw9y715.jpg">
+        	  	     		<p class="then-p">【京东超市】光明 莫斯利安 </p>
+        	  	     		<p class="last-p">¥56.00</p>
+        	  	     	</li>
+        	  	     	<li class="main-li">
+        	  	     		<img src="http://img14.360buyimg.com/n1/s150x150_jfs/t2950/71/440572032/281021/ed714ba3/575968fcN2faf4aa4.jpg">
+        	  	     		<p class="then-p">乐视超级电视 S50 Air 全配</p>
+        	  	     		<p class="last-p">¥2450.00</p>
+        	  	     	</li>
+        	  	     	<li class="main-li">
+        	  	     		<img src="http://img12.360buyimg.com/n1/s150x150_jfs/t2854/169/1441517033/298651/1f2f8ff/573eacadN3ab2c690.jpg">
+        	  	     		<p class="then-p">TCL D49A561U 49英寸 真</p>
+        	  	     		<p class="last-p">¥2499.00</p>
+        	  	     	</li>
+        	  	     	<li class="main-li">
+        	  	     		<img src="http://img11.360buyimg.com/n1/s150x150_jfs/t2485/106/1389973279/306681/733ad92b/569edd28N17ad617e.jpg">
+        	  	     		<p class="then-p">【京东超市】蒙牛 特仑苏 纯</p>
+        	  	     		<p class="last-p">¥65.00</p>
+        	  	     	</li>
+        	  	     	<li class="main-li">
+        	  	     		<img src="http://img11.360buyimg.com/n1/s150x150_jfs/t1414/300/664828936/67058/d4263128/55a46a27N6d1c1c3b.jpg">
+        	  	     		<p class="then-p">顺清柔 手帕纸 柔润 畅想青</p>
+        	  	     		<p class="last-p">¥20.00</p>
+        	  	     	</li>
+        	  	     </ul>
+        	     </div>
+        	</div>
+        </div>
+	</body>
+</html>  		
+

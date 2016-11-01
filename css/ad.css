@@ -1,0 +1,11 @@
+/*广告主题部分*/
+#ad-body{
+   height:80px;
+   background: #0A1026;
+}
+/*广告图片部分*/
+#ad-body #ab-img{
+	width:1210px;
+	height:80px;
+	margin: auto;
+}
